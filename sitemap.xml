@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://razettechnology.github.io/razet-technologies/</loc>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://razettechnology.github.io/razet-technologies/about.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://razettechnology.github.io/razet-technologies/contact.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://razettechnology.github.io/razet-technologies/ai-automation.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://razettechnology.github.io/razet-technologies/business-automation.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://razettechnology.github.io/razet-technologies/chatbots.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://razettechnology.github.io/razet-technologies/generative-ai.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://razettechnology.github.io/razet-technologies/mlops.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://razettechnology.github.io/razet-technologies/data-analytics.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://razettechnology.github.io/razet-technologies/website-design.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://razettechnology.github.io/razet-technologies/training.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+</urlset>
