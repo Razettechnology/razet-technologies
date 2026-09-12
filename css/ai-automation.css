@@ -1,0 +1,1591 @@
+/* =========================================================
+   RAZET TECHNOLOGIES
+   AI & AUTOMATION SERVICE PAGE
+   Dark Premium Tech Theme
+   ========================================================= */
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.ai-container {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.ai-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 18px;
+
+    color: #7f8cff;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.ai-eyebrow span {
+    width: 7px;
+    height: 7px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #6d7cff;
+
+    box-shadow: 0 0 14px rgba(109, 124, 255, 0.45);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.ai-hero {
+    position: relative;
+
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    align-items: center;
+
+    padding: 90px 0 85px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 78% 42%,
+            rgba(49, 92, 255, 0.13),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 12% 78%,
+            rgba(22, 189, 184, 0.06),
+            transparent 27%
+        ),
+        #070a12;
+}
+
+
+/* =========================================================
+   HERO GRID
+   ========================================================= */
+
+.ai-grid {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(110, 135, 180, 0.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(110, 135, 180, 0.045) 1px,
+            transparent 1px
+        );
+
+    background-size: 65px 65px;
+
+    mask-image:
+        radial-gradient(
+            ellipse at center,
+            black 0%,
+            rgba(0, 0, 0, 0.75) 35%,
+            transparent 78%
+        );
+}
+
+
+/* =========================================================
+   HERO CONTAINER
+   ========================================================= */
+
+.ai-hero-container {
+    position: relative;
+    z-index: 2;
+
+    width: min(1180px, 90%);
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 65px;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.ai-hero-content {
+    max-width: 610px;
+}
+
+.ai-hero-content h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(3rem, 5.2vw, 5.2rem);
+    line-height: 1.02;
+    font-weight: 800;
+
+    letter-spacing: -0.06em;
+}
+
+.ai-hero-content h1 span {
+    display: block;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6d7cff,
+            #3195ff 55%,
+            #20c6bf
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.ai-hero-content > p {
+    max-width: 560px;
+
+    margin: 27px 0 32px;
+
+    color: #9aa6b8;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
+.ai-hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.ai-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-height: 48px;
+
+    padding: 0 21px;
+
+    border-radius: 8px;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.ai-btn i {
+    font-size: 11px;
+
+    transition: transform 0.25s ease;
+}
+
+.ai-btn:hover i {
+    transform: translateX(4px);
+}
+
+.ai-btn-primary {
+    color: #ffffff;
+
+    background: #315cff;
+
+    box-shadow:
+        0 12px 30px rgba(49, 92, 255, 0.22);
+}
+
+.ai-btn-primary:hover {
+    transform: translateY(-2px);
+
+    background: #244de8;
+
+    box-shadow:
+        0 16px 38px rgba(49, 92, 255, 0.32);
+}
+
+.ai-btn-secondary {
+    color: #dce4f0;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border: 1px solid rgba(117, 145, 190, 0.18);
+}
+
+.ai-btn-secondary:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(109, 124, 255, 0.35);
+
+    background: rgba(109, 124, 255, 0.05);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
+
+/* =========================================================
+   HERO VISUAL
+   ========================================================= */
+
+.ai-hero-visual {
+    position: relative;
+
+    width: 100%;
+    min-height: 510px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   AI CORE
+   ========================================================= */
+
+.ai-core {
+    position: relative;
+
+    width: 300px;
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   AI RINGS
+   ========================================================= */
+
+.ai-core-ring {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(109, 124, 255, 0.18);
+
+    animation:
+        aiRotate 18s linear infinite;
+}
+
+.ring-one {
+    width: 190px;
+    height: 190px;
+}
+
+.ring-two {
+    width: 245px;
+    height: 245px;
+
+    border-color: rgba(49, 149, 255, 0.14);
+
+    animation-duration: 24s;
+    animation-direction: reverse;
+}
+
+.ring-three {
+    width: 300px;
+    height: 300px;
+
+    border-color: rgba(32, 198, 191, 0.11);
+
+    animation-duration: 30s;
+}
+
+
+/* =========================================================
+   RING ACCENTS
+   ========================================================= */
+
+.ai-core-ring::before,
+.ai-core-ring::after {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #6d7cff;
+
+    box-shadow:
+        0 0 16px rgba(109, 124, 255, 0.55);
+}
+
+.ai-core-ring::before {
+    top: -3px;
+    left: 50%;
+}
+
+.ai-core-ring::after {
+    right: 15%;
+    bottom: 8%;
+
+    background: #20c6bf;
+
+    box-shadow:
+        0 0 16px rgba(32, 198, 191, 0.45);
+}
+
+
+/* =========================================================
+   CORE CENTER
+   ========================================================= */
+
+.ai-core-center {
+    position: relative;
+    z-index: 5;
+
+    width: 108px;
+    height: 108px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #6680ff,
+            #315cff 60%,
+            #2348d5
+        );
+
+    border: 8px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 20px 50px rgba(49, 92, 255, 0.35),
+        0 0 70px rgba(49, 92, 255, 0.15);
+}
+
+.ai-core-center i {
+    font-size: 38px;
+}
+
+
+/* =========================================================
+   HERO NODES
+   ========================================================= */
+
+.ai-node {
+    position: absolute;
+    z-index: 6;
+
+    min-width: 105px;
+
+    padding: 13px 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    border: 1px solid rgba(117, 145, 190, 0.16);
+    border-radius: 11px;
+
+    background: rgba(11, 16, 26, 0.90);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.30);
+
+    backdrop-filter: blur(16px);
+
+    color: #dce4f0;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+
+    animation:
+        aiFloat 5s ease-in-out infinite;
+}
+
+.ai-node i {
+    color: #6d7cff;
+
+    font-size: 13px;
+}
+
+.ai-node-one {
+    top: 13%;
+    left: 2%;
+
+    animation-delay: 0s;
+}
+
+.ai-node-two {
+    top: 30%;
+    right: 2%;
+
+    animation-delay: 1.1s;
+}
+
+.ai-node-three {
+    right: 8%;
+    bottom: 17%;
+
+    animation-delay: 2.1s;
+}
+
+.ai-node-four {
+    left: 5%;
+    bottom: 13%;
+
+    animation-delay: 3s;
+}
+
+.ai-node-three i {
+    color: #20c6bf;
+}
+
+.ai-node-four i {
+    color: #9a86ff;
+}
+
+
+/* =========================================================
+   INTRO / BENEFITS
+   ========================================================= */
+
+.ai-intro {
+    position: relative;
+
+    padding: 110px 0;
+
+    background: #070a12;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.ai-section-heading {
+    max-width: 720px;
+
+    margin-bottom: 55px;
+}
+
+.ai-section-heading h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(2.3rem, 4vw, 4rem);
+    line-height: 1.08;
+    font-weight: 800;
+
+    letter-spacing: -0.055em;
+}
+
+.ai-section-heading h2 span {
+    color: #6d7cff;
+}
+
+.ai-section-heading > p {
+    max-width: 650px;
+
+    margin: 21px 0 0;
+
+    color: #929daf;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BENEFITS GRID
+   ========================================================= */
+
+.ai-benefits-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+
+/* =========================================================
+   BENEFIT CARD
+   ========================================================= */
+
+.ai-benefit-card {
+    position: relative;
+
+    min-height: 235px;
+
+    padding: 28px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(117, 145, 190, 0.12);
+    border-radius: 16px;
+
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(49, 92, 255, 0.08),
+            transparent 35%
+        ),
+        #0b101a;
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.20);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.ai-benefit-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(109, 124, 255, 0.28);
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.28);
+}
+
+
+/* =========================================================
+   BENEFIT ICON
+   ========================================================= */
+
+.ai-benefit-icon {
+    width: 43px;
+    height: 43px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    color: #7f8cff;
+
+    background: rgba(109, 124, 255, 0.09);
+
+    border: 1px solid rgba(109, 124, 255, 0.08);
+}
+
+.ai-benefit-icon i {
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   BENEFIT TEXT
+   ========================================================= */
+
+.ai-benefit-card h3 {
+    margin: 0 0 12px;
+
+    color: #ffffff;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.ai-benefit-card p {
+    margin: 0;
+
+    color: #8f9bad;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SOLUTIONS
+   ========================================================= */
+
+.ai-solutions {
+    position: relative;
+
+    padding: 115px 0;
+
+    background:
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(49, 92, 255, 0.08),
+            transparent 28%
+        ),
+        #070a12;
+}
+
+
+/* =========================================================
+   SOLUTIONS GRID
+   ========================================================= */
+
+.ai-solutions-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   SOLUTION CARD
+   ========================================================= */
+
+.ai-solution-card {
+    position: relative;
+
+    min-height: 285px;
+
+    padding: 34px;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(117, 145, 190, 0.13);
+    border-radius: 18px;
+
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(49, 92, 255, 0.07),
+            transparent 35%
+        ),
+        #0b101a;
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.22);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.ai-solution-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(109, 124, 255, 0.25);
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================================
+   SOLUTION NUMBER
+   ========================================================= */
+
+.ai-solution-number {
+    position: absolute;
+
+    top: 23px;
+    right: 27px;
+
+    color: rgba(109, 124, 255, 0.12);
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   SOLUTION ICON
+   ========================================================= */
+
+.ai-solution-icon {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    color: #7f8cff;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(109, 124, 255, 0.10),
+            rgba(32, 198, 191, 0.07)
+        );
+
+    border: 1px solid rgba(109, 124, 255, 0.08);
+}
+
+.ai-solution-icon i {
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   SOLUTION TEXT
+   ========================================================= */
+
+.ai-solution-card h3 {
+    margin: 0 0 12px;
+
+    color: #ffffff;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+
+    letter-spacing: -0.02em;
+}
+
+.ai-solution-card p {
+    max-width: 480px;
+
+    margin: 0 0 22px;
+
+    color: #8f9bad;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   SOLUTION TAGS
+   ========================================================= */
+
+.ai-solution-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+.ai-solution-tags span {
+    padding: 6px 9px;
+
+    border: 1px solid rgba(117, 145, 190, 0.12);
+    border-radius: 6px;
+
+    color: #aab5c6;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   APPROACH
+   ========================================================= */
+
+.ai-approach {
+    padding: 115px 0;
+
+    background: #070a12;
+}
+
+
+/* =========================================================
+   APPROACH LAYOUT
+   ========================================================= */
+
+.ai-approach-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.9fr)
+        minmax(0, 1.1fr);
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   APPROACH CONTENT
+   ========================================================= */
+
+.ai-approach-content {
+    max-width: 500px;
+}
+
+.ai-approach-content h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    line-height: 1.05;
+    font-weight: 800;
+
+    letter-spacing: -0.055em;
+}
+
+.ai-approach-content h2 span {
+    color: #6d7cff;
+}
+
+.ai-approach-content p {
+    margin: 22px 0 0;
+
+    color: #929daf;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   PROCESS
+   ========================================================= */
+
+.ai-process {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1px solid rgba(117, 145, 190, 0.13);
+}
+
+.ai-process-step {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 55px 1fr;
+
+    gap: 20px;
+
+    padding: 27px 0;
+
+    border-bottom: 1px solid rgba(117, 145, 190, 0.13);
+}
+
+.ai-process-step > span {
+    color: #6d7cff;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.ai-process-step h3 {
+    margin: 0 0 7px;
+
+    color: #ffffff;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.ai-process-step p {
+    margin: 0;
+
+    color: #8f9bad;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.ai-cta {
+    padding: 90px 0;
+
+    background:
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(49, 92, 255, 0.10),
+            transparent 30%
+        ),
+        #070a12;
+}
+
+
+/* =========================================================
+   CTA BOX
+   ========================================================= */
+
+.ai-cta-box {
+    position: relative;
+
+    min-height: 260px;
+
+    padding: 50px 55px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(117, 145, 190, 0.15);
+    border-radius: 20px;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(49, 92, 255, 0.13),
+            transparent 35%
+        ),
+        #0b101a;
+
+    box-shadow:
+        0 25px 65px rgba(0, 0, 0, 0.28);
+}
+
+.ai-cta-box::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    right: -80px;
+    bottom: -120px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(109, 124, 255, 0.12);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CTA TEXT
+   ========================================================= */
+
+.ai-cta-box .ai-eyebrow {
+    margin-bottom: 14px;
+}
+
+.ai-cta-box h2 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.05;
+    font-weight: 800;
+
+    letter-spacing: -0.05em;
+}
+
+.ai-cta-box h2 span {
+    color: #6d7cff;
+}
+
+.ai-cta-box p {
+    max-width: 570px;
+
+    margin: 17px 0 0;
+
+    color: #929daf;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.ai-cta-box > .ai-btn {
+    position: relative;
+    z-index: 5;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    border-top: 1px solid rgba(117, 145, 190, 0.10);
+
+    background: #070a12;
+}
+
+.site-footer p {
+    color: #707c90;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes aiRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes aiFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1050px
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .ai-hero-container {
+        gap: 35px;
+    }
+
+    .ai-hero-content h1 {
+        font-size: clamp(2.8rem, 5vw, 4.5rem);
+    }
+
+    .ai-benefits-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .ai-approach-layout {
+        gap: 55px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 850px
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .ai-hero {
+        min-height: auto;
+
+        padding: 80px 0;
+    }
+
+    .ai-hero-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .ai-hero-content {
+        max-width: 680px;
+    }
+
+    .ai-hero-visual {
+        min-height: 430px;
+    }
+
+    .ai-solutions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-approach-layout {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .ai-approach-content {
+        max-width: 650px;
+    }
+
+    .ai-cta-box {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 650px
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .ai-container {
+        width: 88%;
+    }
+
+    .ai-hero-container {
+        width: 88%;
+    }
+
+    .ai-hero {
+        padding: 70px 0;
+    }
+
+    .ai-hero-content h1 {
+        font-size: clamp(2.7rem, 12vw, 4rem);
+
+        letter-spacing: -0.055em;
+    }
+
+    .ai-hero-content > p {
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+    .ai-hero-buttons {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+    .ai-btn {
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
+    .ai-hero-visual {
+        min-height: 360px;
+    }
+
+    .ai-core {
+        width: 230px;
+        height: 230px;
+    }
+
+    .ring-one {
+        width: 145px;
+        height: 145px;
+    }
+
+    .ring-two {
+        width: 190px;
+        height: 190px;
+    }
+
+    .ring-three {
+        width: 230px;
+        height: 230px;
+    }
+
+    .ai-core-center {
+        width: 82px;
+        height: 82px;
+    }
+
+    .ai-core-center i {
+        font-size: 28px;
+    }
+
+    .ai-node {
+        min-width: auto;
+
+        padding: 10px 11px;
+
+        font-size: 9px;
+    }
+
+    .ai-node i {
+        font-size: 11px;
+    }
+
+    .ai-node-one {
+        left: 0;
+    }
+
+    .ai-node-two {
+        right: 0;
+    }
+
+    .ai-node-three {
+        right: 2%;
+    }
+
+    .ai-node-four {
+        left: 2%;
+    }
+
+    .ai-intro,
+    .ai-solutions,
+    .ai-approach {
+        padding: 80px 0;
+    }
+
+    .ai-section-heading {
+        margin-bottom: 40px;
+    }
+
+    .ai-section-heading h2 {
+        font-size: 2.5rem;
+    }
+
+    .ai-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-benefit-card {
+        min-height: auto;
+    }
+
+    .ai-solution-card {
+        min-height: auto;
+
+        padding: 28px;
+    }
+
+    .ai-approach-content h2 {
+        font-size: 2.7rem;
+    }
+
+    .ai-cta {
+        padding: 65px 0;
+    }
+
+    .ai-cta-box {
+        min-height: auto;
+
+        padding: 35px 28px;
+    }
+
+    .ai-cta-box h2 {
+        font-size: 2.5rem;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 420px
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .ai-hero-content h1 {
+        font-size: 2.65rem;
+    }
+
+    .ai-hero-visual {
+        min-height: 320px;
+    }
+
+    .ai-core {
+        width: 200px;
+        height: 200px;
+    }
+
+    .ring-one {
+        width: 125px;
+        height: 125px;
+    }
+
+    .ring-two {
+        width: 165px;
+        height: 165px;
+    }
+
+    .ring-three {
+        width: 200px;
+        height: 200px;
+    }
+
+    .ai-node {
+        padding: 8px 9px;
+
+        gap: 6px;
+
+        font-size: 8px;
+    }
+
+    .ai-node-one {
+        top: 5%;
+    }
+
+    .ai-node-two {
+        top: 25%;
+    }
+
+    .ai-node-three {
+        bottom: 10%;
+    }
+
+    .ai-node-four {
+        bottom: 6%;
+    }
+
+    .ai-section-heading h2 {
+        font-size: 2.25rem;
+    }
+
+    .ai-approach-content h2 {
+        font-size: 2.4rem;
+    }
+
+    .ai-process-step {
+        grid-template-columns: 42px 1fr;
+
+        gap: 12px;
+    }
+
+    .ai-cta-box h2 {
+        font-size: 2.2rem;
+    }
+
+}
+
+/* =========================================================
+   SERVICE FAQ
+========================================================= */
+
+.service-faq-section {
+    padding: 110px 0;
+    background: #070a12;
+}
+
+.service-faq-container {
+    width: min(100% - 40px, 950px);
+    margin: 0 auto;
+}
+
+.service-faq-header {
+    max-width: 680px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.service-faq-label {
+    margin-bottom: 16px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    color: #315cff;
+}
+
+.service-faq-header h2 {
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+}
+
+.service-faq-header h2 span {
+    color: #6d7cff;
+}
+
+.service-faq-header p {
+    margin: 20px auto 0;
+    max-width: 620px;
+    color: #9aa6b8;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.service-faq-list {
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.service-faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.service-faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 25px 4px;
+    border: 0;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: left;
+}
+
+.service-faq-question span {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.service-faq-question i {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #0b101a;
+    color: #315cff;
+    font-size: 12px;
+    transition: 0.3s ease;
+}
+
+.service-faq-answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s ease;
+}
+
+.service-faq-answer p {
+    min-height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0 65px 0 4px;
+    color: #9aa6b8;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.service-faq-item.active .service-faq-answer {
+    grid-template-rows: 1fr;
+}
+
+.service-faq-item.active .service-faq-answer p {
+    padding-bottom: 25px;
+}
+
+.service-faq-item.active .service-faq-question i {
+    transform: rotate(45deg);
+    background: #315cff;
+    color: #ffffff;
+}
+
+
+@media (max-width: 700px) {
+
+    .service-faq-section {
+        padding: 80px 0;
+    }
+
+    .service-faq-container {
+        width: min(100% - 30px, 950px);
+    }
+
+    .service-faq-question {
+        padding: 21px 2px;
+    }
+
+    .service-faq-question span {
+        font-size: 15px;
+    }
+
+    .service-faq-answer p {
+        padding-right: 35px;
+    }
+
+}
