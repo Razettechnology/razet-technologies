@@ -89,7 +89,7 @@ if (header) {
 
 
 /* =========================================================
-   CONTACT FORMS - SENDING STATE
+   CONTACT FORM → N8N
    ========================================================= */
 
 const contactForms = document.querySelectorAll(
@@ -98,7 +98,10 @@ const contactForms = document.querySelectorAll(
 
 contactForms.forEach(function (contactForm) {
 
-    contactForm.addEventListener("submit", function () {
+    contactForm.addEventListener("submit", async function (event) {
+
+        // Stop the browser from navigating to the webhook
+        event.preventDefault();
 
         const submitButton = contactForm.querySelector(
             'button[type="submit"]'
@@ -106,12 +109,64 @@ contactForms.forEach(function (contactForm) {
 
         if (!submitButton) return;
 
+        const originalButtonText = submitButton.innerHTML;
+
         submitButton.disabled = true;
 
         submitButton.innerHTML = `
             <span>Sending...</span>
             <i class="fas fa-spinner fa-spin"></i>
         `;
+
+        // Collect form information
+        const formData = new FormData(contactForm);
+
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch(
+                "https://ability-decreased-arranged-stamp.trycloudflare.com/webhook/razet-contact",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
+
+                    body: new URLSearchParams(data)
+                }
+            );
+
+            if (!response.ok) {
+                throw new Error("Webhook request failed");
+            }
+
+            // Successful submission
+            alert(
+                "Thank you! Your project enquiry has been received. The Razet Technologies team will review it and get back to you."
+            );
+
+            // Clear the form
+            contactForm.reset();
+
+        } catch (error) {
+
+            console.error(
+                "Razet Contact Form Error:",
+                error
+            );
+
+            alert(
+                "Sorry, we could not send your enquiry. Please try again or contact us directly by email or WhatsApp."
+            );
+
+        } finally {
+
+            submitButton.disabled = false;
+
+            submitButton.innerHTML = originalButtonText;
+
+        }
 
     });
 
@@ -170,3 +225,4 @@ serviceFaqQuestions.forEach(function (question) {
     });
 
 });
+

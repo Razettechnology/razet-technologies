@@ -75,6 +75,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ai-chat.css">
 </head>
 
 <body>
@@ -1252,6 +1253,79 @@
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+
+    <!-- Razet AI Assistant -->
+<button
+    id="razet-ai-button"
+    class="razet-ai-button"
+    aria-label="Open Razet AI Assistant">
+    ✦
+</button>
+
+<div
+    id="razet-ai-chat"
+    class="razet-ai-chat">
+
+    <div class="razet-ai-header">
+
+        <div class="razet-ai-header-info">
+
+            <div class="razet-ai-avatar">
+                R
+            </div>
+
+            <div>
+                <div class="razet-ai-title">
+                    Razet AI Assistant
+                </div>
+
+                <div class="razet-ai-status">
+                    Online
+                </div>
+            </div>
+
+        </div>
+
+        <button
+            id="razet-ai-close"
+            class="razet-ai-close"
+            aria-label="Close chat">
+            ×
+        </button>
+
+    </div>
+
+    <div
+        id="razet-ai-messages"
+        class="razet-ai-messages">
+
+        <div class="razet-ai-message bot">
+            Hello! 👋 I'm the Razet AI Assistant. How can I help you today?
+        </div>
+
+    </div>
+
+    <div class="razet-ai-input-area">
+
+        <input
+            id="razet-ai-input"
+            class="razet-ai-input"
+            type="text"
+            placeholder="Tell me what you need..."
+            autocomplete="off">
+
+        <button
+            id="razet-ai-send"
+            class="razet-ai-send"
+            aria-label="Send message">
+            ➤
+        </button>
+
+    </div>
+
+</div>
+
+<script src="js/ai-chat.js"></script>
 
 </body>
 </html>
