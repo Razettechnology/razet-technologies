@@ -87,7 +87,7 @@ function formatAIResponse(text) {
          */
 
         // Send message to n8n
-fetch("http://localhost:5678/webhook-test/razet-ai", {
+fetch("https://ability-decreased-arranged-stamp.trycloudflare.com/webhook/razet-ai", {
     method: "POST",
     headers: {
         "Content-Type": "application/json"
