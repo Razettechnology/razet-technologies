@@ -41,14 +41,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     event.preventDefault();
                     openChat();
                 });
-}
+            }
 
-   // Close chat
-if (closeButton) {
-    closeButton.addEventListener("click", function () {
-        chatWindow.classList.remove("active");
-    });
-}
+            // Close chat
+            if (closeButton) {
+                closeButton.addEventListener("click", function () {
+                    chatWindow.classList.remove("active");
+                });
+            }
 
 function formatAIResponse(text) {
     return text
