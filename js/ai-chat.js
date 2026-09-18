@@ -19,21 +19,36 @@ document.addEventListener("DOMContentLoaded", function () {
     const input = document.getElementById("razet-ai-input");
     const sendButton = document.getElementById("razet-ai-send");
     const messages = document.getElementById("razet-ai-messages");
+    const letsTalkButton = document.getElementById("lets-talk-button");
 
     if (!chatButton || !chatWindow) {
         return;
     }
 
-    // Open chat
-    chatButton.addEventListener("click", function () {
-        chatWindow.classList.add("active");
-        input.focus();
-    });
+            // Open chat
+            function openChat() {
+                chatWindow.classList.add("active");
+                input.focus();
+            }
 
-    // Close chat
+            chatButton.addEventListener("click", function () {
+                openChat();
+            });
+
+            // Let's Talk button opens AI Assistant
+            if (letsTalkButton) {
+                letsTalkButton.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    openChat();
+                });
+}
+
+   // Close chat
+if (closeButton) {
     closeButton.addEventListener("click", function () {
         chatWindow.classList.remove("active");
     });
+}
 
 function formatAIResponse(text) {
     return text
@@ -115,7 +130,7 @@ fetch("https://ability-decreased-arranged-stamp.trycloudflare.com/webhook/razet-
     console.error("n8n connection error:", error);
 
     addMessage(
-        "Sorry, I couldn't connect to the Razet AI system. Please try again.",
+        "Sorry, I couldn't connect to the Razet AI system. Please try again or use the contact page to connect with the Razet Team.",
         "bot"
     );
 
