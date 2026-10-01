@@ -1,17 +1,30 @@
 /* ================================
    RAZET AI ASSISTANT
    Front-end interface
-   ================================ */
+   ================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
+    // ================================
+    // CONFIGURATION
+    // ================================
 
-    // Create a unique conversation ID for this visitor
+    const AI_WEBHOOK_URL =
+        "https://ai.razet.work/webhook/razet-ai";
+
+    // ================================
+    // SESSION
+    // ================================
+
     let sessionId = localStorage.getItem("razetSessionId");
 
     if (!sessionId) {
         sessionId = crypto.randomUUID();
         localStorage.setItem("razetSessionId", sessionId);
-}
+    }
+
+    // ================================
+    // ELEMENTS
+    // ================================
 
     const chatButton = document.getElementById("razet-ai-button");
     const chatWindow = document.getElementById("razet-ai-chat");
@@ -25,47 +38,113 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-            // Open chat
-            function openChat() {
-                chatWindow.classList.add("active");
+    // ================================
+    // OPEN CHAT
+    // ================================
+
+    function openChat() {
+        chatWindow.classList.add("active");
+
+        if (input) {
+            setTimeout(function () {
                 input.focus();
-            }
+            }, 100);
+        }
+    }
 
-            chatButton.addEventListener("click", function () {
-                openChat();
-            });
+    // ================================
+    // CLOSE CHAT
+    // ================================
 
-            // Let's Talk button opens AI Assistant
-            if (letsTalkButton) {
-                letsTalkButton.addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openChat();
-                });
-            }
+    function closeChat() {
+        chatWindow.classList.remove("active");
+    }
 
-            // Close chat
-            if (closeButton) {
-                closeButton.addEventListener("click", function () {
-                    chatWindow.classList.remove("active");
-                });
-            }
+    // ================================
+    // AI FLOATING BUTTON
+    // ================================
 
-function formatAIResponse(text) {
-    return text
-        // Escape HTML for safety
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
+    chatButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+        openChat();
+    });
 
-        // Bold: **text**
-        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+    // ================================
+    // LET'S TALK BUTTON
+    // ================================
 
-        // Line breaks
-        .replace(/\n/g, "<br>");
-}
+    if (letsTalkButton) {
+        letsTalkButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            openChat();
+        });
+    }
 
-    // Add a message to the chat
+    // ================================
+    // CLOSE BUTTON
+    // ================================
+
+    if (closeButton) {
+        closeButton.addEventListener("click", function (event) {
+            event.stopPropagation();
+            closeChat();
+        });
+    }
+
+    // ================================
+    // PREVENT CHAT CLICK FROM CLOSING
+    // ================================
+
+    chatWindow.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
+
+    // ================================
+    // CLICK OUTSIDE CHAT
+    // ================================
+
+    document.addEventListener("click", function (event) {
+        if (
+            chatWindow.classList.contains("active") &&
+            !chatWindow.contains(event.target) &&
+            !chatButton.contains(event.target)
+        ) {
+            closeChat();
+        }
+    });
+
+    // ================================
+    // ESCAPE KEY
+    // ================================
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            closeChat();
+        }
+    });
+
+    // ================================
+    // FORMAT AI RESPONSE SAFELY
+    // ================================
+
+    function formatAIResponse(text) {
+        return String(text)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+            .replace(/\n/g, "<br>");
+    }
+
+    // ================================
+    // ADD MESSAGE
+    // ================================
+
     function addMessage(text, sender) {
+        if (!messages) {
+            return;
+        }
+
         const message = document.createElement("div");
 
         message.classList.add(
@@ -80,8 +159,14 @@ function formatAIResponse(text) {
         messages.scrollTop = messages.scrollHeight;
     }
 
-    // Send message
+    // ================================
+    // SEND MESSAGE
+    // ================================
+
     function sendMessage() {
+        if (!input) {
+            return;
+        }
 
         const text = input.value.trim();
 
@@ -95,58 +180,103 @@ function formatAIResponse(text) {
         // Clear input
         input.value = "";
 
-        /*
-         * Temporary response.
-         * Later, this will be replaced with
-         * the n8n AI workflow.
-         */
-
-        // Send message to n8n
-fetch("https://ability-decreased-arranged-stamp.trycloudflare.com/webhook/razet-ai", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-    message: text,
-    sessionId: sessionId
-    })
-})
-.then(function (response) {
-    return response.json();
-})
-.then(function (data) {
-
-    console.log("Response from n8n:", data);
-
-    addMessage(
-        data.message || "I received your message.",
-        "bot"
-    );
-
-})
-.catch(function (error) {
-
-    console.error("n8n connection error:", error);
-
-    addMessage(
-        "Sorry, I couldn't connect to the Razet AI system. Please try again or use the contact page to connect with the Razet Team.",
-        "bot"
-    );
-
-});
-    }
-
-    // Send button
-    sendButton.addEventListener("click", sendMessage);
-
-    // Enter key
-    input.addEventListener("keydown", function (event) {
-
-        if (event.key === "Enter") {
-            sendMessage();
+        // Disable send button while processing
+        if (sendButton) {
+            sendButton.disabled = true;
         }
 
-    });
+        // Send message to n8n through Cloudflare
+        fetch(AI_WEBHOOK_URL, {
+            method: "POST",
 
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                message: text,
+                sessionId: sessionId
+            })
+        })
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error(
+                        "HTTP error: " + response.status
+                    );
+                }
+
+                return response.json();
+            })
+
+            .then(function (data) {
+                console.log(
+                    "Response from Razet AI:",
+                    data
+                );
+
+                const aiResponse =
+                    data.message ||
+                    data.output ||
+                    data.response ||
+                    "I received your message.";
+
+                addMessage(
+                    aiResponse,
+                    "bot"
+                );
+            })
+
+            .catch(function (error) {
+                console.error(
+                    "Razet AI connection error:",
+                    error
+                );
+
+                addMessage(
+                    "Sorry, I couldn't connect to the Razet AI system. Please try again or use the contact page to connect with the Razet Team.",
+                    "bot"
+                );
+            })
+
+            .finally(function () {
+                // Re-enable send button
+                if (sendButton) {
+                    sendButton.disabled = false;
+                }
+
+                if (input) {
+                    input.focus();
+                }
+            });
+    }
+
+    // ================================
+    // SEND BUTTON
+    // ================================
+
+    if (sendButton) {
+        sendButton.addEventListener(
+            "click",
+            function (event) {
+                event.stopPropagation();
+                sendMessage();
+            }
+        );
+    }
+
+    // ================================
+    // ENTER KEY
+    // ================================
+
+    if (input) {
+        input.addEventListener(
+            "keydown",
+            function (event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    sendMessage();
+                }
+            }
+        );
+    }
 });

@@ -1253,19 +1253,26 @@
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    
 
-    <!-- Razet AI Assistant -->
+<!-- Razet AI Assistant -->
+
+<!-- Floating AI Button -->
 <button
     id="razet-ai-button"
     class="razet-ai-button"
-    aria-label="Open Razet AI Assistant">
-    ✦
+    type="button"
+    aria-label="Talk to Razet AI">
+    <span class="razet-ai-icon">✦</span>
+    <span class="razet-ai-label">Talk to Razet AI</span>
 </button>
 
+<!-- AI Chat Window -->
 <div
     id="razet-ai-chat"
     class="razet-ai-chat">
 
+    <!-- Chat Header -->
     <div class="razet-ai-header">
 
         <div class="razet-ai-header-info">
@@ -1286,16 +1293,18 @@
 
         </div>
 
+        <!-- Close Button -->
         <button
-        id="razet-ai-button"
-        class="razet-ai-button"
-        aria-label="Open Razet AI Assistant">
-        <span class="razet-ai-icon">✦</span>
-        <span class="razet-ai-label">Chat with Razet AI</span>
-    </button>
+            id="razet-ai-close"
+            class="razet-ai-close"
+            type="button"
+            aria-label="Close Razet AI Assistant">
+            ×
+        </button>
 
     </div>
 
+    <!-- Messages -->
     <div
         id="razet-ai-messages"
         class="razet-ai-messages">
@@ -1306,6 +1315,7 @@
 
     </div>
 
+    <!-- Input -->
     <div class="razet-ai-input-area">
 
         <input
@@ -1318,6 +1328,7 @@
         <button
             id="razet-ai-send"
             class="razet-ai-send"
+            type="button"
             aria-label="Send message">
             ➤
         </button>
