@@ -1708,24 +1708,42 @@
 }
 }
 
-/* Image on Home page  */
-
+/* Data Hero Image */
 .data-hero-image {
-    width: 1200px;
-    max-width: none;
-    height: 800px;
+    width: 100%;
+    max-width: 1200px;          /* same size as before on PC */
+    aspect-ratio: 1200 / 800;   /* keeps the original proportions (3 / 2) */
+    height: auto;
+    margin: 0 auto;             /* replaces left:50% + translateX */
     overflow: hidden;
     border-radius: 20px;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    box-sizing: border-box;
+    background: #080b14;
 }
 
 .data-hero-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    background: #080b14;
+    object-fit: contain;        /* shows the full image, no cropping */
     object-position: center;
+    background: #080b14;
     display: block;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .data-hero-image {
+        max-width: 95%;
+        border-radius: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .data-hero-image {
+        max-width: 100%;
+        aspect-ratio: 4 / 3;    /* taller ratio so the image isn't tiny on phones */
+        border-radius: 12px;
+    }
 }
