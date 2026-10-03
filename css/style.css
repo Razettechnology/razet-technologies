@@ -3958,4 +3958,641 @@ section#about::after {
         margin-top: 40px;
     }
 
+}/* =========================================================
+   RAZET TECHNOLOGIES — TESTIMONIALS
+========================================================= */
+
+.testimonials {
+    position: relative;
+    padding: 120px 0;
+    background: #070a12;
+    overflow: hidden;
+}
+
+/* Subtle technology grid */
+.testimonials::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(42, 104, 180, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(42, 104, 180, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 70px 70px;
+
+    mask-image:
+        radial-gradient(
+            ellipse at center,
+            black 0%,
+            transparent 75%
+        );
+}
+
+/* Blue atmospheric glow */
+.testimonials::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: -220px;
+    top: 15%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(52, 141, 255, 0.09),
+            transparent 70%
+        );
+
+    filter: blur(35px);
+    pointer-events: none;
+}
+
+/* Section heading */
+.testimonials .section-heading {
+    position: relative;
+    z-index: 2;
+}
+
+/* Testimonials grid */
+.testimonials-grid {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+/* Testimonial card */
+.testimonial-card {
+    position: relative;
+
+    padding: 30px;
+
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.035),
+            rgba(255,255,255,0.012)
+        );
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(52, 141, 255, 0.32);
+
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.28),
+        0 0 30px rgba(52, 141, 255, 0.05);
+}
+
+/* Top row */
+.testimonial-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+/* Service icon */
+.testimonial-icon {
+    width: 45px;
+    height: 45px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 12px;
+
+    background: rgba(52, 141, 255, 0.10);
+    border: 1px solid rgba(52, 141, 255, 0.14);
+
+    color: #4d8dff;
+    font-size: 16px;
+}
+
+/* Service label */
+.testimonial-service {
+    color: #7f96ff;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    text-align: right;
+}
+
+/* Quote */
+.testimonial-quote {
+    position: relative;
+}
+
+.testimonial-quote > i {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #315cff;
+    font-size: 18px;
+
+    opacity: 0.8;
+}
+
+.testimonial-quote p {
+    margin: 0;
+
+    color: #c1cad8;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+/* Result */
+.testimonial-result {
+    margin-top: 25px;
+    padding: 14px 16px;
+
+    border-left: 2px solid #315cff;
+
+    background: rgba(49, 92, 255, 0.055);
+}
+
+.testimonial-result span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #72809a;
+
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.testimonial-result strong {
+    display: block;
+
+    color: #e7ecf5;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* Client */
+.testimonial-client {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+/* Avatar */
+.testimonial-avatar {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #315cff,
+            #347cff
+        );
+
+    color: #ffffff;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+
+    box-shadow:
+        0 6px 18px rgba(49, 92, 255, 0.20);
+}
+
+/* Client name */
+.testimonial-client h4 {
+    margin: 0;
+
+    color: #f4f7fb;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Client role/company */
+.testimonial-client p {
+    margin: 3px 0 0;
+
+    color: #8995a8;
+
+    font-size: 10px;
+    line-height: 1.45;
+}
+
+/* Country */
+.testimonial-client small {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #5f6c80;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   TESTIMONIALS — TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .testimonials {
+        padding: 90px 0;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   TESTIMONIALS — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .testimonials {
+        padding: 80px 0;
+    }
+
+    .testimonials-grid {
+        gap: 15px;
+    }
+
+    .testimonial-card {
+        padding: 24px;
+        border-radius: 16px;
+    }
+
+    .testimonial-top {
+        align-items: flex-start;
+    }
+
+    .testimonial-service {
+        max-width: 180px;
+        line-height: 1.4;
+    }
+
+    .testimonial-quote p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .testimonial-result {
+        margin-top: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   TESTIMONIALS — SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .testimonial-top {
+        flex-direction: column;
+    }
+
+    .testimonial-service {
+        text-align: left;
+    }
+
+}
+/* =========================================================
+   RAZET TECHNOLOGIES — PROCESS
+========================================================= */
+
+.process {
+    position: relative;
+    padding: 110px 0;
+    background: #080b14;
+    overflow: hidden;
+}
+
+.process::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(
+            rgba(49, 92, 255, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(49, 92, 255, 0.035) 1px,
+            transparent 1px
+        );
+    background-size: 70px 70px;
+    pointer-events: none;
+}
+
+.process .section-heading {
+    position: relative;
+    z-index: 2;
+}
+
+.process-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.process-card {
+    position: relative;
+    padding: 30px 25px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: rgba(255,255,255,0.025);
+    transition: 0.35s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(49, 92, 255, 0.35);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+.process-number {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    color: rgba(49, 92, 255, 0.35);
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.process-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 25px;
+    border-radius: 13px;
+    background: rgba(49, 92, 255, 0.10);
+    border: 1px solid rgba(49, 92, 255, 0.15);
+    color: #315cff;
+}
+
+.process-card h3 {
+    margin-bottom: 12px;
+    color: #f4f7fb;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+}
+
+.process-card p {
+    margin: 0;
+    color: #929daf;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.process-bottom {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 45px;
+    padding: 25px 30px;
+    border: 1px solid rgba(49, 92, 255, 0.15);
+    border-radius: 16px;
+    background: rgba(49, 92, 255, 0.04);
+}
+
+.process-bottom p {
+    margin: 0;
+    color: #c7cfdd;
+    font-size: 13px;
+}
+
+.process-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: #315cff;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.process-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(49, 92, 255, 0.25);
+}
+
+@media (max-width: 900px) {
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .process {
+        padding: 80px 0;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+/* =========================================================
+   TECHNOLOGY IN ACTION
+========================================================= */
+
+.technology-action {
+    position: relative;
+    padding: 110px 0;
+    background: #070a12;
+    overflow: hidden;
+}
+
+.technology-action-layout {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.technology-action-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid rgba(49, 92, 255, 0.18);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+}
+
+.technology-action-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(49, 92, 255, 0.08),
+        transparent 45%
+    );
+    pointer-events: none;
+}
+
+.technology-action-image img {
+    display: block;
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+}
+
+.technology-action-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.technology-action-item {
+    display: flex;
+    gap: 18px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.technology-action-item > span {
+    flex-shrink: 0;
+    color: #315cff;
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.technology-action-item h3 {
+    margin: 0 0 8px;
+    color: #f4f7fb;
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+}
+
+.technology-action-item p {
+    margin: 0;
+    color: #929daf;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+
+    .technology-action-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .technology-action-image img {
+        height: 430px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .technology-action {
+        padding: 80px 0;
+    }
+
+    .technology-action-image img {
+        height: 300px;
+    }
+
+}
+
+/* Image on Home page  */
+
+.homes-hero-image {
+    width: 1200px;
+    max-width: none;
+    height: 650px;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.homes-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #080b14;
+    object-position: center;
+    display: block;
 }

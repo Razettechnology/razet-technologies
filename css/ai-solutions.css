@@ -1,0 +1,690 @@
+/* =========================================================
+   RAZET TECHNOLOGIES — AI SOLUTIONS
+   ========================================================= */
+
+.ais {
+    --bg: #05070d;
+    --bg-alt: #080d18;
+    --panel: #0d1422;
+    --panel-light: #111b2d;
+    --line: rgba(255, 255, 255, 0.10);
+
+    --text: #f4f7fb;
+    --muted: #a7b2c5;
+
+    --accent: #315cff;
+    --accent-2: #4f7cff;
+
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+}
+
+.ais * {
+    box-sizing: border-box;
+}
+
+.ais h1,
+.ais h2,
+.ais h3,
+.ais h4 {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+.ais p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.65;
+}
+
+.ais a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.ais-wrap {
+    width: min(1180px, 100% - 48px);
+    margin: 0 auto;
+}
+
+.ais a:focus-visible,
+.ais-btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.ais-hero {
+    padding: 96px 0 72px;
+
+    background:
+        radial-gradient(
+            900px 400px at 85% -10%,
+            rgba(49, 92, 255, 0.16),
+            transparent 60%
+        ),
+        var(--bg);
+}
+
+.ais-hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 56px;
+    align-items: center;
+}
+
+.ais-kicker {
+    color: var(--accent) !important;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 16px !important;
+    letter-spacing: 0.04em;
+}
+
+.ais-hero h1 {
+    font-size: clamp(2.3rem, 5vw, 3.8rem);
+    font-weight: 800;
+    max-width: 15ch;
+    color: #ffffff;
+}
+
+.ais-lead {
+    font-size: 1.1rem;
+    max-width: 56ch;
+    margin-top: 22px !important;
+    color: #b5c0d3 !important;
+}
+
+.ais-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+}
+
+.ais-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.ais-btn:hover {
+    transform: translateY(-2px);
+}
+
+.ais-btn-primary {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+.ais-btn-primary:hover {
+    background: #2548d9;
+}
+
+.ais-btn-ghost {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #f4f7fb;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.ais-btn-ghost:hover {
+    border-color: var(--accent);
+    background: rgba(49, 92, 255, 0.08);
+}
+
+.ais-btn-light {
+    background: #ffffff;
+    color: #08101f;
+    white-space: nowrap;
+}
+
+.ais-btn-light:hover {
+    background: #e9efff;
+}
+
+
+/* =========================================================
+   HERO JUMP LINKS
+   ========================================================= */
+
+.ais-jump {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.ais-jump a {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    padding: 18px 20px;
+
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+
+    transition:
+        border-color 0.2s,
+        transform 0.2s,
+        background 0.2s;
+}
+
+.ais-jump a:hover {
+    border-color: rgba(49, 92, 255, 0.55);
+    background: #101a2c;
+    transform: translateX(4px);
+}
+
+.ais-jump i {
+    width: 44px;
+    height: 44px;
+    flex: none;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    background: rgba(49, 92, 255, 0.12);
+    color: #5d82ff;
+}
+
+.ais-jump span {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 0.88rem;
+    color: #aab6ca;
+}
+
+.ais-jump b {
+    color: #f4f7fb;
+    font-size: 1rem;
+    font-family: 'Manrope', sans-serif;
+}
+
+
+/* =========================================================
+   BENEFITS STRIP
+   ========================================================= */
+
+.ais-strip {
+    border-block: 1px solid var(--line);
+    background: #080d18;
+}
+
+.ais-strip-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 28px 0;
+}
+
+.ais-strip-grid div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 14px;
+    align-items: center;
+}
+
+.ais-strip i {
+    grid-row: span 2;
+    color: #5d82ff;
+    font-size: 1.3rem;
+}
+
+.ais-strip b {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.98rem;
+    color: #f4f7fb;
+}
+
+.ais-strip span {
+    font-size: 0.85rem;
+    color: #9da9bd;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.ais-section {
+    padding: 96px 0;
+    background: var(--bg);
+}
+
+.ais-alt {
+    background: var(--bg-alt);
+    border-block: 1px solid var(--line);
+}
+
+.ais-head {
+    max-width: 640px;
+    margin-bottom: 56px;
+}
+
+.ais-head-left {
+    margin-bottom: 0;
+}
+
+.ais-head h2 {
+    font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   PILLARS
+   ========================================================= */
+
+.ais-pillar {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 48px;
+
+    padding: 48px 0;
+
+    border-top: 1px solid var(--line);
+
+    scroll-margin-top: 90px;
+}
+
+.ais-pillar-intro > i {
+    display: grid;
+    place-items: center;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent-2)
+    );
+
+    color: #ffffff;
+    font-size: 1.3rem;
+
+    margin-bottom: 22px;
+}
+
+.ais-pillar-intro h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.ais-link {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+
+    margin-top: 22px;
+
+    color: #5d82ff;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.ais-link:hover {
+    color: #7c9aff;
+}
+
+.ais-link:hover i {
+    transform: translateX(4px);
+}
+
+.ais-link i {
+    transition: transform 0.2s;
+}
+
+
+/* =========================================================
+   SERVICE ITEMS
+   ========================================================= */
+
+.ais-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid var(--line);
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    align-self: start;
+}
+
+.ais-items li {
+    background: var(--panel);
+    padding: 24px;
+}
+
+.ais-items li:hover {
+    background: var(--panel-light);
+}
+
+.ais-items h4 {
+    font-size: 1.02rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #f4f7fb;
+}
+
+.ais-items p {
+    font-size: 0.92rem;
+    color: #a5b0c3;
+}
+
+
+/* =========================================================
+   AI PIPELINE
+   ========================================================= */
+
+.ais-pipeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+
+    counter-reset: p;
+}
+
+.ais-pipeline li {
+    position: relative;
+
+    padding: 24px;
+
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    transition:
+        border-color 0.2s,
+        transform 0.2s,
+        background 0.2s;
+}
+
+.ais-pipeline li:hover {
+    transform: translateY(-3px);
+    border-color: rgba(49, 92, 255, 0.45);
+    background: var(--panel-light);
+}
+
+.ais-pipeline li:not(:last-child)::after {
+    content: "\f054";
+
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+
+    position: absolute;
+    right: -14px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 0.7rem;
+    color: #5d82ff;
+
+    z-index: 1;
+}
+
+.ais-pipeline li.on {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent) inset;
+}
+
+.ais-pipeline i {
+    color: #5d82ff;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.ais-pipeline b {
+    font-family: 'Manrope', sans-serif;
+    color: #f4f7fb;
+}
+
+.ais-pipeline span {
+    font-size: 0.88rem;
+    color: #9da9bd;
+}
+
+
+/* =========================================================
+   PROCESS
+   ========================================================= */
+
+.ais-process-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+}
+
+.ais-steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    gap: 12px;
+}
+
+.ais-steps li {
+    display: flex;
+    gap: 18px;
+
+    padding: 20px 22px;
+
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+
+    transition:
+        border-color 0.2s,
+        background 0.2s;
+}
+
+.ais-steps li:hover {
+    border-color: rgba(49, 92, 255, 0.4);
+    background: var(--panel-light);
+}
+
+.ais-steps span {
+    flex: none;
+
+    width: 36px;
+    height: 36px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(49, 92, 255, 0.13);
+    color: #6b8cff;
+
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+}
+
+.ais-steps h4 {
+    margin-bottom: 4px;
+    font-size: 1.05rem;
+    color: #f4f7fb;
+}
+
+.ais-steps p {
+    font-size: 0.92rem;
+    color: #a5b0c3;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.ais-cta {
+    padding: 0 0 96px;
+}
+
+.ais-cta-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    padding: 48px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #162d78,
+            #315cff
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.30);
+}
+
+.ais-cta-box h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.ais-cta-box p {
+    color: rgba(255, 255, 255, 0.86);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 960px) {
+
+    .ais-hero-grid,
+    .ais-pillar,
+    .ais-process-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .ais-strip-grid,
+    .ais-pipeline {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ais-pipeline li::after {
+        display: none;
+    }
+
+    .ais-section {
+        padding: 72px 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .ais-wrap {
+        width: min(100% - 32px, 1180px);
+    }
+
+    .ais-items,
+    .ais-strip-grid,
+    .ais-pipeline {
+        grid-template-columns: 1fr;
+    }
+
+    .ais-cta-box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px 24px;
+    }
+
+    .ais-hero {
+        padding: 64px 0 48px;
+    }
+
+    .ais-hero h1 {
+        max-width: 100%;
+    }
+
+    .ais-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ais * {
+        transition: none !important;
+    }
+}
+
+/* AI Solutions Hero Image */
+.ai-solutions-hero-image {
+    width: 1200px;
+    max-width: none;
+    height: 650px;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ai-solutions-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #080b14;
+    object-position: center;
+    display: block;
+}

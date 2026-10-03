@@ -133,13 +133,28 @@ serviceFaqQuestions.forEach(function (question) {
 
             if (item !== currentItem) {
                 item.classList.remove("active");
+
+                const icon = item.querySelector("i");
+                if (icon) {
+                    icon.classList.remove("fa-minus");
+                    icon.classList.add("fa-plus");
+                }
             }
 
         });
 
         currentItem.classList.toggle("active");
 
+        const icon = question.querySelector("i");
+
+        if (currentItem.classList.contains("active")) {
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+        } else {
+            icon.classList.remove("fa-minus");
+            icon.classList.add("fa-plus");
+        }
+
     });
 
 });
-
