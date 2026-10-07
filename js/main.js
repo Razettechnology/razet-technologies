@@ -88,6 +88,32 @@ if (header) {
 }
 
 
+const email = document.getElementById("email").value.trim();
+
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if (!emailPattern.test(email)) {
+    alert("Please enter a valid email address, e.g. you@example.com.");
+    document.getElementById("email").focus();
+    return;
+}
+
+contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address, e.g. you@example.com.");
+        document.getElementById("email").focus();
+        return;
+    }
+
+    // Continue with your existing submission code...
+});
 
 /* =========================================================
    FAQ ACCORDION
@@ -156,5 +182,15 @@ serviceFaqQuestions.forEach(function (question) {
         }
 
     });
+
+        const payload = {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        phone: formData.get("phone"),
+        company: formData.get("company"),
+        service: formData.get("service"),
+        budget: formData.get("budget"),
+        message: formData.get("message")
+    };
 
 });
