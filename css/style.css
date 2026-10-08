@@ -2,6 +2,7 @@
    RAZET TECHNOLOGIES
    Main Stylesheet
 ========================================================= */
+
 body {
     font-family: 'Inter', sans-serif;
 }
@@ -18,6 +19,7 @@ button,
 nav a {
     font-family: 'Manrope', sans-serif;
 }
+
 
 /* =========================
    RESET
@@ -81,6 +83,13 @@ button {
         #6d5dfc,
         #19d3ae
     );
+
+    /* CONTACT VARIABLES */
+    --contact-blue: #315cff;
+    --contact-blue-hover: #244de8;
+    --contact-border: #dfe4ec;
+    --contact-dark: #14213d;
+    --contact-muted: #718096;
 }
 
 
@@ -216,7 +225,6 @@ button {
 .nav a {
     color: #b9c1cf;
     font-size: 14px;
-
     transition: 0.3s ease;
 }
 
@@ -301,12 +309,8 @@ button {
     margin: 0 auto;
 
     display: grid;
-
-    /* TWO EQUAL COLUMNS */
     grid-template-columns: 1fr 1fr;
-
     align-items: center;
-
     gap: 55px;
 }
 
@@ -318,7 +322,7 @@ button {
 .hero-content {
     position: relative;
     z-index: 3;
-    
+
     width: 100%;
     max-width: 590px;
 }
@@ -330,7 +334,7 @@ button {
 
     margin-bottom: 22px;
 
-     color: #315cff;
+    color: #315cff;
 
     font-size: 10px;
     font-weight: 700;
@@ -385,10 +389,10 @@ button {
 
     margin: 28px 0 0;
 
-      color: #59677f;
+    color: #59677f;
 
     font-family: 'Inter', sans-serif;
-      font-size: 15px;
+    font-size: 15px;
     line-height: 1.8;
 }
 
@@ -482,7 +486,7 @@ button {
 
     gap: 8px;
 
-   color: #65738a;
+    color: #65738a;
 
     font-size: 9px;
     font-weight: 600;
@@ -528,11 +532,6 @@ button {
 .hero-boardroom {
     position: relative;
 
-    /*
-       THIS IS THE IMPORTANT PART
-       The image can NEVER become huge.
-    */
-
     width: min(100%, 470px);
 
     aspect-ratio: 1 / 1;
@@ -541,11 +540,11 @@ button {
 
     border-radius: 22px;
 
-   border: 1px solid rgba(45, 116, 220, 0.22);
+    border: 1px solid rgba(45, 116, 220, 0.22);
 
     background: #ffffff;
 
-     box-shadow:
+    box-shadow:
         0 30px 70px rgba(17, 55, 100, 0.16),
         0 0 45px rgba(52, 141, 255, 0.08);
 
@@ -563,21 +562,9 @@ button {
 
     display: block;
 
-    /*
-       VERY IMPORTANT:
-       prevents the original 1318px width
-       from controlling the layout.
-    */
-
     max-width: none;
 
     object-fit: cover;
-
-    /*
-       Adjust this if you want a different
-       portion of the boardroom visible.
-    */
-
     object-position: center;
 
     transition:
@@ -632,11 +619,11 @@ button {
 
     border-radius: 12px;
 
-     border: 1px solid rgba(52, 116, 220, 0.18);
+    border: 1px solid rgba(52, 116, 220, 0.18);
 
-     background: rgba(255, 255, 255, 0.94);
+    background: rgba(255, 255, 255, 0.94);
 
-     backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
 
     box-shadow:
         0 15px 35px rgba(25, 65, 120, 0.13);
@@ -668,7 +655,7 @@ button {
 .hero-badge-text strong {
     display: block;
 
-     color: #14213d;
+    color: #14213d;
 
     font-family: 'Space Grotesk', sans-serif;
 
@@ -681,7 +668,7 @@ button {
 
     margin-top: 4px;
 
-   color: #6d7b91;
+    color: #6d7b91;
 
     font-size: 7px;
 }
@@ -747,7 +734,7 @@ button {
 
     pointer-events: none;
 
-     background:
+    background:
         radial-gradient(
             circle,
             rgba(52, 141, 255, 0.12),
@@ -837,7 +824,6 @@ button {
     }
 
     .hero-container {
-
         grid-template-columns: 1fr;
 
         gap: 55px;
@@ -846,7 +832,6 @@ button {
     }
 
     .hero-content {
-
         max-width: 700px;
 
         margin: 0 auto;
@@ -880,7 +865,6 @@ button {
     }
 
     .hero-visual {
-
         width: 100%;
 
         max-width: 520px;
@@ -891,7 +875,6 @@ button {
     }
 
     .hero-boardroom {
-
         width: min(100%, 470px);
     }
 }
@@ -975,7 +958,9 @@ button {
 }
 
 
-/* AI CARD */
+/* =========================
+   AI CARD
+========================= */
 
 .ai-card {
     position: relative;
@@ -1296,7 +1281,7 @@ button {
     display: grid;
 
     grid-template-columns:
-        repeat(4, 1fr);
+        repeat(5, 1fr);
 
     gap: 14px;
 }
@@ -1403,9 +1388,10 @@ button {
     transform: translateX(4px);
 }
 
+
 /* =========================================================
    SERVICE CARD LINKS
-   ========================================================= */
+========================================================= */
 
 .service-card-link {
     display: block;
@@ -1466,11 +1452,6 @@ button {
     overflow: hidden;
 }
 
-
-/* =========================
-   ABOUT CONTAINER
-========================= */
-
 .about-container {
     position: relative;
 
@@ -1485,11 +1466,6 @@ button {
     gap: 90px;
 }
 
-
-/* =========================
-   ABOUT VISUAL
-========================= */
-
 .about-visual {
     position: relative;
 
@@ -1499,11 +1475,6 @@ button {
 
     place-items: center;
 }
-
-
-/* =========================
-   TECH GRID
-========================= */
 
 .about-grid {
     position: absolute;
@@ -1534,11 +1505,6 @@ button {
             transparent 78%
         );
 }
-
-
-/* =========================
-   ABOUT BOX
-========================= */
 
 .about-box {
     position: relative;
@@ -1572,11 +1538,6 @@ button {
     z-index: 2;
 }
 
-
-/* =========================
-   SMALL ABOUT LABEL
-========================= */
-
 .about-small {
     color: #64748b;
 
@@ -1586,11 +1547,6 @@ button {
 
     font-weight: 600;
 }
-
-
-/* =========================
-   ABOUT IMAGE
-========================= */
 
 .about-big {
     position: relative;
@@ -1614,11 +1570,6 @@ button {
     z-index: 2;
 }
 
-
-/* =========================
-   ABOUT IMAGE
-========================= */
-
 .about-big img {
     width: 100%;
 
@@ -1635,21 +1586,9 @@ button {
         filter 0.6s ease;
 }
 
-
-/* =========================
-   IMAGE HOVER
-========================= */
-
 .about-big:hover img {
     transform: scale(1.03);
 }
-
-
-/* =========================
-   OLD TEXT ELEMENTS
-   Kept compatible in case
-   they still exist in HTML
-========================= */
 
 .about-big span:nth-child(odd) {
     color: #0b1630;
@@ -1661,21 +1600,11 @@ button {
     font-size: 18px;
 }
 
-
-/* =========================
-   ABOUT CONTENT
-========================= */
-
 .about-content {
     position: relative;
 
     z-index: 2;
 }
-
-
-/* =========================
-   ABOUT HEADINGS
-========================= */
 
 .about-content h2,
 .about-content h3 {
@@ -1683,11 +1612,6 @@ button {
 
     font-family: 'Manrope', sans-serif;
 }
-
-
-/* =========================
-   ABOUT PARAGRAPH
-========================= */
 
 .about-content p {
     color: #59677f;
@@ -1701,11 +1625,6 @@ button {
     line-height: 1.8;
 }
 
-
-/* =========================
-   ABOUT POINTS
-========================= */
-
 .about-points {
     display: flex;
 
@@ -1715,11 +1634,6 @@ button {
 
     margin: 28px 0;
 }
-
-
-/* =========================
-   ABOUT POINT ITEM
-========================= */
 
 .about-points div {
     display: flex;
@@ -1734,11 +1648,6 @@ button {
 
     font-size: 12px;
 }
-
-
-/* =========================
-   ABOUT POINT ICON
-========================= */
 
 .about-points i {
     width: 20px;
@@ -1772,37 +1681,22 @@ button {
     overflow: hidden;
 }
 
-
-/* =========================================================
-   THREE FRAME LAYOUT
-========================================================= */
-
 .academy-layout {
-
     width: min(1180px, 90%);
 
     margin: 0 auto;
 
     display: grid;
 
-    /*
-       LEFT       IMAGE       RIGHT
-       flexible   250px       flexible
-    */
-    grid-template-columns: minmax(0, 1fr) 250px minmax(0, 1fr);
+    grid-template-columns:
+        minmax(0, 1fr) 250px minmax(0, 1fr);
 
     gap: 20px;
 
     align-items: stretch;
 }
 
-
-/* =========================================================
-   ALL THREE FRAMES
-========================================================= */
-
 .academy-panel {
-
     min-width: 0;
 
     box-sizing: border-box;
@@ -1822,13 +1716,7 @@ button {
     overflow: hidden;
 }
 
-
-/* =========================================================
-   LEFT FRAME
-========================================================= */
-
 .academy-text-panel {
-
     min-height: 390px;
 
     padding: 45px;
@@ -1842,9 +1730,7 @@ button {
     box-sizing: border-box;
 }
 
-
 .academy-label {
-
     margin-bottom: 20px;
 
     color: #ffffff;
@@ -1854,9 +1740,7 @@ button {
     font-weight: 600;
 }
 
-
 .academy-text-panel h2 {
-
     margin: 0;
 
     max-width: 380px;
@@ -1874,9 +1758,7 @@ button {
     font-weight: 800;
 }
 
-
 .academy-text-panel p {
-
     max-width: 390px;
 
     margin: 22px 0 28px;
@@ -1890,9 +1772,7 @@ button {
     line-height: 1.7;
 }
 
-
 .academy-link {
-
     display: inline-flex;
 
     align-items: center;
@@ -1912,27 +1792,17 @@ button {
     text-decoration: none;
 }
 
-
 .academy-link i {
-
     font-size: 11px;
 
     transition: transform 0.25s ease;
 }
 
-
 .academy-link:hover i {
-
     transform: translateX(5px);
 }
 
-
-/* =========================================================
-   MIDDLE IMAGE FRAME
-========================================================= */
-
 .academy-photo-panel {
-
     width: 250px;
 
     height: 480px;
@@ -1948,13 +1818,7 @@ button {
     box-sizing: border-box;
 }
 
-
-/* =========================================================
-   IMAGE CONTAINER
-========================================================= */
-
 .academy-photo {
-
     position: relative;
 
     width: 100%;
@@ -1972,13 +1836,7 @@ button {
     box-sizing: border-box;
 }
 
-
-/* =========================================================
-   IMAGE
-========================================================= */
-
 .academy-photo img {
-
     display: block;
 
     width: 100% !important;
@@ -2002,13 +1860,7 @@ button {
     box-sizing: border-box;
 }
 
-
-/* =========================================================
-   RIGHT FRAME
-========================================================= */
-
 .academy-topics-panel {
-
     min-height: 390px;
 
     padding: 20px;
@@ -2020,9 +1872,7 @@ button {
     box-sizing: border-box;
 }
 
-
 .academy-topics {
-
     width: 100%;
 
     min-width: 0;
@@ -2034,13 +1884,7 @@ button {
     gap: 12px;
 }
 
-
-/* =========================================================
-   TOPIC CARDS
-========================================================= */
-
 .academy-topic {
-
     min-width: 0;
 
     min-height: 68px;
@@ -2070,9 +1914,7 @@ button {
     line-height: 1.35;
 }
 
-
 .academy-topic i {
-
     flex-shrink: 0;
 
     color: #8175ff;
@@ -2088,7 +1930,6 @@ button {
 @media (max-width: 1000px) {
 
     .academy-layout {
-
         grid-template-columns:
             minmax(0, 1fr)
             minmax(0, 1fr);
@@ -2096,9 +1937,7 @@ button {
         gap: 20px;
     }
 
-
     .academy-photo-panel {
-
         width: 100%;
 
         height: 330px;
@@ -2108,15 +1947,11 @@ button {
         grid-row: 2;
     }
 
-
     .academy-text-panel {
-
         min-height: 330px;
     }
 
-
     .academy-topics-panel {
-
         min-height: 330px;
     }
 }
@@ -2129,13 +1964,10 @@ button {
 @media (max-width: 700px) {
 
     .training {
-
         padding: 70px 0;
     }
 
-
     .academy-layout {
-
         width: 88%;
 
         grid-template-columns: 1fr;
@@ -2143,23 +1975,17 @@ button {
         gap: 18px;
     }
 
-
     .academy-text-panel {
-
         min-height: auto;
 
         padding: 35px 28px;
     }
 
-
     .academy-text-panel h2 {
-
         font-size: 2.5rem;
     }
 
-
     .academy-photo-panel {
-
         width: 100%;
 
         height: 320px;
@@ -2171,17 +1997,13 @@ button {
         padding: 8px;
     }
 
-
     .academy-topics-panel {
-
         min-height: auto;
 
         padding: 18px;
     }
 
-
     .academy-topics {
-
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -2194,13 +2016,10 @@ button {
 @media (max-width: 450px) {
 
     .academy-topics {
-
         grid-template-columns: 1fr;
     }
 
-
     .academy-photo-panel {
-
         height: 290px;
     }
 }
@@ -2324,7 +2143,6 @@ button {
     .footer-container {
         grid-template-columns: 2fr 1fr 1fr;
     }
-
 }
 
 
@@ -2398,7 +2216,6 @@ button {
     .footer-container {
         grid-template-columns: 1fr 1fr;
     }
-
 }
 
 
@@ -2454,18 +2271,13 @@ button {
 
         gap: 8px;
     }
-
 }
+
 
 /* =========================================================
    RAZET TECHNOLOGIES — ABOUT SECTION
    LIGHT / WHITE CORPORATE TECH THEME
 ========================================================= */
-
-
-/* =========================
-   ABOUT SECTION BACKGROUND
-========================= */
 
 .about-section,
 section#about {
@@ -2489,23 +2301,12 @@ section#about {
     overflow: hidden;
 }
 
-
-/* =========================
-   REMOVE OLD DARK SECTION
-   BACKGROUND / OVERLAY
-========================= */
-
 .about-section::before,
 .about-section::after,
 section#about::before,
 section#about::after {
     pointer-events: none;
 }
-
-
-/* =========================
-   ABOUT CONTAINER
-========================= */
 
 .about-container {
     position: relative;
@@ -2521,11 +2322,6 @@ section#about::after {
     gap: 90px;
 }
 
-
-/* =========================
-   ABOUT VISUAL
-========================= */
-
 .about-visual {
     position: relative;
 
@@ -2537,11 +2333,6 @@ section#about::after {
 
     z-index: 2;
 }
-
-
-/* =========================
-   TECH GRID
-========================= */
 
 .about-grid {
     position: absolute;
@@ -2575,11 +2366,6 @@ section#about::after {
         );
 }
 
-
-/* =========================
-   ABOUT BOX
-========================= */
-
 .about-box {
     position: relative;
 
@@ -2612,11 +2398,6 @@ section#about::after {
     z-index: 2;
 }
 
-
-/* =========================
-   SMALL LABEL
-========================= */
-
 .about-small {
     color: #64748b !important;
 
@@ -2628,11 +2409,6 @@ section#about::after {
 
     letter-spacing: 2px;
 }
-
-
-/* =========================
-   ABOUT IMAGE FRAME
-========================= */
 
 .about-big {
     position: relative;
@@ -2656,11 +2432,6 @@ section#about::after {
     z-index: 3;
 }
 
-
-/* =========================
-   ABOUT IMAGE
-========================= */
-
 .about-big img {
     width: 100%;
 
@@ -2675,19 +2446,9 @@ section#about::after {
     transition: transform 0.6s ease;
 }
 
-
-/* =========================
-   IMAGE HOVER
-========================= */
-
 .about-big:hover img {
     transform: scale(1.03);
 }
-
-
-/* =========================
-   OLD ABOUT-BIG TEXT
-========================= */
 
 .about-big span:nth-child(odd) {
     color: #0b1630 !important;
@@ -2699,21 +2460,11 @@ section#about::after {
     font-size: 18px;
 }
 
-
-/* =========================
-   ABOUT CONTENT
-========================= */
-
 .about-content {
     position: relative;
 
     z-index: 5;
 }
-
-
-/* =========================
-   ABOUT HEADING
-========================= */
 
 .about-content h1,
 .about-content h2,
@@ -2725,11 +2476,6 @@ section#about::after {
 
     font-weight: 900;
 }
-
-
-/* =========================
-   ABOUT PARAGRAPHS
-========================= */
 
 .about-content p {
     color: #59677f !important;
@@ -2743,11 +2489,6 @@ section#about::after {
     margin-top: 20px;
 }
 
-
-/* =========================
-   ABOUT POINTS
-========================= */
-
 .about-points {
     display: flex;
 
@@ -2757,11 +2498,6 @@ section#about::after {
 
     margin: 28px 0;
 }
-
-
-/* =========================
-   ABOUT POINT TEXT
-========================= */
 
 .about-points div {
     display: flex;
@@ -2776,11 +2512,6 @@ section#about::after {
 
     font-size: 12px;
 }
-
-
-/* =========================
-   ABOUT CHECK ICON
-========================= */
 
 .about-points i {
     width: 20px;
@@ -2802,11 +2533,6 @@ section#about::after {
     font-size: 9px;
 }
 
-
-/* =========================
-   ABOUT BUTTON / LINK
-========================= */
-
 .about-content a {
     color: #0b1630;
 
@@ -2822,12 +2548,6 @@ section#about::after {
 .about-content a:hover {
     color: #315cff;
 }
-
-
-/* =========================
-   SUBTLE TECH GRID OVER
-   THE WHITE BACKGROUND
-========================= */
 
 .about-section::before,
 section#about::before {
@@ -2862,11 +2582,6 @@ section#about::before {
     pointer-events: none;
 }
 
-
-/* =========================
-   BLUE ATMOSPHERIC GLOW
-========================= */
-
 .about-section::after,
 section#about::after {
     content: "";
@@ -2897,11 +2612,6 @@ section#about::after {
     pointer-events: none;
 }
 
-
-/* =========================
-   RESPONSIVE
-========================= */
-
 @media (max-width: 900px) {
 
     .about-container {
@@ -2922,7 +2632,6 @@ section#about::after {
         width: 90%;
     }
 }
-
 
 @media (max-width: 600px) {
 
@@ -2956,6 +2665,8 @@ section#about::after {
         margin: 22px 0;
     }
 }
+
+
 /* =========================================================
    CONTACT SECTION
    RAZET TECHNOLOGIES — LIGHT CORPORATE TECH THEME
@@ -2985,11 +2696,6 @@ section#about::after {
 
     color: #0b1630;
 }
-
-
-/* =========================================================
-   SUBTLE TECHNOLOGY GRID
-========================================================= */
 
 .contact-section::before {
     content: "";
@@ -3024,11 +2730,6 @@ section#about::after {
     z-index: 0;
 }
 
-
-/* =========================================================
-   CONTACT CONTAINER
-========================================================= */
-
 .contact-container {
     position: relative;
 
@@ -3047,19 +2748,9 @@ section#about::after {
     align-items: start;
 }
 
-
-/* =========================================================
-   LEFT SIDE
-========================================================= */
-
 .contact-intro {
     padding-top: 20px;
 }
-
-
-/* =========================================================
-   EYEBROW
-========================================================= */
 
 .section-eyebrow {
     display: flex;
@@ -3081,7 +2772,6 @@ section#about::after {
     letter-spacing: 0.16em;
 }
 
-
 .section-eyebrow span {
     width: 7px;
 
@@ -3097,11 +2787,6 @@ section#about::after {
         0 0 10px rgba(25, 213, 208, 0.55),
         0 0 22px rgba(25, 213, 208, 0.18);
 }
-
-
-/* =========================================================
-   CONTACT MAIN HEADING
-========================================================= */
 
 .contact-intro h2 {
     max-width: 600px;
@@ -3121,7 +2806,6 @@ section#about::after {
     color: #0b1630 !important;
 }
 
-
 .contact-intro h2 span {
     display: inline;
 
@@ -3140,11 +2824,6 @@ section#about::after {
     background-clip: text;
 }
 
-
-/* =========================================================
-   CONTACT DESCRIPTION
-========================================================= */
-
 .contact-description {
     max-width: 540px;
 
@@ -3159,11 +2838,6 @@ section#about::after {
     line-height: 1.8;
 }
 
-
-/* =========================================================
-   CONTACT DETAILS
-========================================================= */
-
 .contact-details {
     display: flex;
 
@@ -3173,7 +2847,6 @@ section#about::after {
 
     margin-top: 42px;
 }
-
 
 .contact-detail {
     display: flex;
@@ -3192,15 +2865,9 @@ section#about::after {
         transform 0.3s ease;
 }
 
-
 .contact-detail:hover {
     transform: translateX(5px);
 }
-
-
-/* =========================================================
-   CONTACT ICON
-========================================================= */
 
 .contact-icon {
     width: 44px;
@@ -3230,11 +2897,6 @@ section#about::after {
         0 8px 20px rgba(52, 141, 255, 0.06);
 }
 
-
-/* =========================================================
-   CONTACT DETAIL LABEL
-========================================================= */
-
 .contact-detail small {
     display: block;
 
@@ -3251,11 +2913,6 @@ section#about::after {
     letter-spacing: 0.15em;
 }
 
-
-/* =========================================================
-   CONTACT DETAIL VALUE
-========================================================= */
-
 .contact-detail strong {
     display: block;
 
@@ -3267,11 +2924,6 @@ section#about::after {
 
     font-weight: 600;
 }
-
-
-/* =========================================================
-   FORM WRAPPER
-========================================================= */
 
 .contact-form-wrapper {
     position: relative;
@@ -3298,11 +2950,6 @@ section#about::after {
     z-index: 3;
 }
 
-
-/* =========================================================
-   FORM HEADER
-========================================================= */
-
 .form-header {
     display: flex;
 
@@ -3323,7 +2970,6 @@ section#about::after {
     letter-spacing: 0.16em;
 }
 
-
 .form-header div {
     height: 1px;
 
@@ -3337,11 +2983,6 @@ section#about::after {
         );
 }
 
-
-/* =========================================================
-   FORM
-========================================================= */
-
 .contact-form {
     display: flex;
 
@@ -3351,11 +2992,6 @@ section#about::after {
 
     width: 100%;
 }
-
-
-/* =========================================================
-   FORM ROW
-========================================================= */
 
 .form-row {
     display: grid;
@@ -3367,11 +3003,6 @@ section#about::after {
     width: 100%;
 }
 
-
-/* =========================================================
-   FORM GROUP
-========================================================= */
-
 .form-group {
     display: flex;
 
@@ -3381,11 +3012,6 @@ section#about::after {
 
     min-width: 0;
 }
-
-
-/* =========================================================
-   FORM LABEL
-========================================================= */
 
 .form-group label {
     display: block;
@@ -3400,11 +3026,6 @@ section#about::after {
 
     line-height: 1.4;
 }
-
-
-/* =========================================================
-   FORM INPUTS / SELECT / TEXTAREA
-========================================================= */
 
 .form-group input,
 .form-group select,
@@ -3437,22 +3058,12 @@ section#about::after {
         background 0.25s ease;
 }
 
-
-/* =========================================================
-   INPUTS / SELECT
-========================================================= */
-
 .form-group input,
 .form-group select {
     height: 50px;
 
     padding: 0 15px;
 }
-
-
-/* =========================================================
-   TEXTAREA
-========================================================= */
 
 .form-group textarea {
     min-height: 140px;
@@ -3462,22 +3073,12 @@ section#about::after {
     resize: vertical;
 }
 
-
-/* =========================================================
-   PLACEHOLDER
-========================================================= */
-
 .form-group input::placeholder,
 .form-group textarea::placeholder {
     color: #94a3b8 !important;
 
     opacity: 1;
 }
-
-
-/* =========================================================
-   SELECT
-========================================================= */
 
 .form-group select {
     appearance: none;
@@ -3486,11 +3087,6 @@ section#about::after {
 
     color: #526176 !important;
 }
-
-
-/* =========================================================
-   INPUT FOCUS
-========================================================= */
 
 .form-group input:focus,
 .form-group select:focus,
@@ -3553,40 +3149,27 @@ section#about::after {
 
     transition:
         transform 0.3s ease,
-        box-shadow 0.3s ease;
+        box-shadow 0.3s ease,
+        filter 0.3s ease;
 }
-
-
-/* =========================================================
-   SUBMIT HOVER
-========================================================= */
 
 .contact-submit:hover {
     transform: translateY(-3px);
 
+    filter: brightness(0.88);
+
     box-shadow:
         0 17px 45px rgba(52, 141, 255, 0.26);
 }
-
-
-/* =========================================================
-   SUBMIT ICON
-========================================================= */
 
 .contact-submit i {
     transition:
         transform 0.3s ease;
 }
 
-
 .contact-submit:hover i {
     transform: translateX(5px);
 }
-
-
-/* =========================================================
-   FORM SECURITY NOTE
-========================================================= */
 
 .form-note {
     display: flex;
@@ -3607,7 +3190,6 @@ section#about::after {
 
     line-height: 1.5;
 }
-
 
 .form-note i {
     color: #19bfc0 !important;
@@ -3705,8 +3287,9 @@ section#about::after {
 
     .contact-submit {
         height: 52px;
-    }   
+    }
 }
+
 
 /* =========================
    CONTACT EYEBROW — LARGER
@@ -3722,6 +3305,7 @@ section#about::after {
     width: 8px;
     height: 8px;
 }
+
 
 /* =========================================================
    FAQ SECTION
@@ -3957,8 +3541,10 @@ section#about::after {
         gap: 10px;
         margin-top: 40px;
     }
+}
 
-}/* =========================================================
+
+/* =========================================================
    RAZET TECHNOLOGIES — TESTIMONIALS
 ========================================================= */
 
@@ -3969,7 +3555,6 @@ section#about::after {
     overflow: hidden;
 }
 
-/* Subtle technology grid */
 .testimonials::before {
     content: "";
     position: absolute;
@@ -3997,7 +3582,6 @@ section#about::after {
         );
 }
 
-/* Blue atmospheric glow */
 .testimonials::after {
     content: "";
     position: absolute;
@@ -4019,13 +3603,11 @@ section#about::after {
     pointer-events: none;
 }
 
-/* Section heading */
 .testimonials .section-heading {
     position: relative;
     z-index: 2;
 }
 
-/* Testimonials grid */
 .testimonials-grid {
     position: relative;
     z-index: 2;
@@ -4035,7 +3617,6 @@ section#about::after {
     gap: 18px;
 }
 
-/* Testimonial card */
 .testimonial-card {
     position: relative;
 
@@ -4069,7 +3650,6 @@ section#about::after {
         0 0 30px rgba(52, 141, 255, 0.05);
 }
 
-/* Top row */
 .testimonial-top {
     display: flex;
     align-items: center;
@@ -4079,7 +3659,6 @@ section#about::after {
     margin-bottom: 25px;
 }
 
-/* Service icon */
 .testimonial-icon {
     width: 45px;
     height: 45px;
@@ -4096,7 +3675,6 @@ section#about::after {
     font-size: 16px;
 }
 
-/* Service label */
 .testimonial-service {
     color: #7f96ff;
 
@@ -4110,7 +3688,6 @@ section#about::after {
     text-align: right;
 }
 
-/* Quote */
 .testimonial-quote {
     position: relative;
 }
@@ -4136,7 +3713,6 @@ section#about::after {
     line-height: 1.85;
 }
 
-/* Result */
 .testimonial-result {
     margin-top: 25px;
     padding: 14px 16px;
@@ -4168,7 +3744,6 @@ section#about::after {
     line-height: 1.5;
 }
 
-/* Client */
 .testimonial-client {
     display: flex;
     align-items: center;
@@ -4180,7 +3755,6 @@ section#about::after {
     border-top: 1px solid rgba(255,255,255,0.07);
 }
 
-/* Avatar */
 .testimonial-avatar {
     width: 40px;
     height: 40px;
@@ -4209,7 +3783,6 @@ section#about::after {
         0 6px 18px rgba(49, 92, 255, 0.20);
 }
 
-/* Client name */
 .testimonial-client h4 {
     margin: 0;
 
@@ -4220,7 +3793,6 @@ section#about::after {
     font-weight: 700;
 }
 
-/* Client role/company */
 .testimonial-client p {
     margin: 3px 0 0;
 
@@ -4230,7 +3802,6 @@ section#about::after {
     line-height: 1.45;
 }
 
-/* Country */
 .testimonial-client small {
     display: block;
 
@@ -4242,10 +3813,6 @@ section#about::after {
 }
 
 
-/* =========================================================
-   TESTIMONIALS — TABLET
-========================================================= */
-
 @media (max-width: 850px) {
 
     .testimonials {
@@ -4255,13 +3822,8 @@ section#about::after {
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
-
 }
 
-
-/* =========================================================
-   TESTIMONIALS — MOBILE
-========================================================= */
 
 @media (max-width: 600px) {
 
@@ -4295,13 +3857,8 @@ section#about::after {
     .testimonial-result {
         margin-top: 22px;
     }
-
 }
 
-
-/* =========================================================
-   TESTIMONIALS — SMALL MOBILE
-========================================================= */
 
 @media (max-width: 400px) {
 
@@ -4312,8 +3869,9 @@ section#about::after {
     .testimonial-service {
         text-align: left;
     }
-
 }
+
+
 /* =========================================================
    RAZET TECHNOLOGIES — PROCESS
 ========================================================= */
@@ -4451,7 +4009,6 @@ section#about::after {
     .process-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 @media (max-width: 600px) {
@@ -4468,109 +4025,330 @@ section#about::after {
         flex-direction: column;
         align-items: flex-start;
     }
-
 }
+
+
 /* =========================================================
-   TECHNOLOGY IN ACTION
+   CONTACT FORM CARD
 ========================================================= */
 
-.technology-action {
-    position: relative;
-    padding: 110px 0;
-    background: #070a12;
-    overflow: hidden;
-}
+.ra-contact-form-card {
+    min-width: 0;
 
-.technology-action-layout {
-    display: grid;
-    grid-template-columns: 1.25fr 0.75fr;
-    gap: 55px;
-    align-items: center;
-}
+    padding: 38px;
 
-.technology-action-image {
-    position: relative;
-    overflow: hidden;
+    border: 1px solid var(--contact-border);
     border-radius: 20px;
-    border: 1px solid rgba(49, 92, 255, 0.18);
-    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+
+    background: #e9f2f8;
+
+    box-shadow:
+        0 25px 70px rgba(20,40,80,.07);
 }
 
-.technology-action-image::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(49, 92, 255, 0.08),
-        transparent 45%
-    );
-    pointer-events: none;
+.ra-contact-form-heading {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding-bottom: 27px;
+
+    margin-bottom: 27px;
+
+    border-bottom: 1px solid var(--contact-border);
 }
 
-.technology-action-image img {
-    display: block;
+.ra-contact-form-heading h3 {
+    margin: 0 0 5px;
+
+    color: var(--contact-dark);
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.ra-contact-form-heading p {
+    margin: 0;
+
+    color: var(--contact-muted);
+
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+}
+
+
+/* FORM */
+
+.ra-contact-form {
     width: 100%;
-    height: 520px;
-    object-fit: cover;
 }
 
-.technology-action-content {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+.ra-contact-form-row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 17px;
 }
 
-.technology-action-item {
-    display: flex;
-    gap: 18px;
-    padding-bottom: 25px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+.ra-contact-field {
+    min-width: 0;
+
+    margin-bottom: 18px;
 }
 
-.technology-action-item > span {
-    flex-shrink: 0;
-    color: #315cff;
+.ra-contact-field label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--contact-dark);
+
     font-family: 'Manrope', sans-serif;
     font-size: 11px;
     font-weight: 800;
 }
 
-.technology-action-item h3 {
-    margin: 0 0 8px;
-    color: #f4f7fb;
+.ra-contact-field input,
+.ra-contact-field select,
+.ra-contact-field textarea {
+    width: 100%;
+
+    border: 1px solid #dfe4ec;
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #ffffff;
+    color: var(--contact-dark);
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+.ra-contact-field input,
+.ra-contact-field select {
+    height: 50px;
+
+    padding: 0 14px;
+}
+
+.ra-contact-field textarea {
+    min-height: 145px;
+
+    padding: 14px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+.ra-contact-field input::placeholder,
+.ra-contact-field textarea::placeholder {
+    color: #9aa3b2;
+}
+
+.ra-contact-field input:focus,
+.ra-contact-field select:focus,
+.ra-contact-field textarea:focus {
+    border-color: rgba(49,92,255,.55);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(49,92,255,.08);
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.ra-contact-submit {
+    width: 100%;
+    min-height: 54px;
+    margin-top: 5px;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border: 0;
+    border-radius: 9px;
+
+    /* ALWAYS VISIBLE DEFAULT BLUE */
+    background: #315cff;
+    background-color: #315cff;
+
+    color: #ffffff;
+
     font-family: 'Manrope', sans-serif;
-    font-size: 15px;
+    font-size: 13px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        background-color .2s ease,
+        box-shadow .2s ease;
 }
 
-.technology-action-item p {
-    margin: 0;
-    color: #929daf;
-    font-size: 12px;
-    line-height: 1.8;
+
+/* DARKER BLUE ON HOVER */
+
+.ra-contact-submit:hover {
+    background: #244de8;
+    background-color: #244de8;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(49, 92, 255, 0.20);
 }
 
-@media (max-width: 900px) {
 
-    .technology-action-layout {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
+/* KEEP BUTTON BLUE WHILE CLICKING */
 
-    .technology-action-image img {
-        height: 430px;
-    }
+.ra-contact-submit:active {
+    background: #1f43cf;
+    background-color: #1f43cf;
 
+    transform: translateY(0);
 }
 
-@media (max-width: 600px) {
 
-    .technology-action {
-        padding: 80px 0;
-    }
+/* DISABLED STATE */
 
-    .technology-action-image img {
-        height: 300px;
-    }
+.ra-contact-submit:disabled {
+    background: #315cff;
+    background-color: #315cff;
 
+    opacity: 0.65;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+.ra-contact-form-disclaimer {
+    max-width: 500px;
+
+    margin: 14px auto 0;
+
+    color: #929baa;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+/* ==============================
+   SERVICES DROPDOWN
+============================== */
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    background: none;
+    border: none;
+    padding: 0;
+
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.nav-dropdown-toggle i {
+    font-size: 10px;
+    transition: transform 0.25s ease;
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 18px);
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+
+    min-width: 260px;
+
+    background: #0b1020;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 12px;
+
+    padding: 8px;
+
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+
+    z-index: 1000;
+}
+
+.nav-dropdown-menu a {
+    display: block;
+
+    padding: 12px 14px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    line-height: 1.4;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.nav-dropdown-menu a:hover {
+    background: rgba(49, 92, 255, 0.14);
+    color: #6f8cff;
+}
+
+/* Desktop hover */
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown:hover .nav-dropdown-toggle i,
+.nav-dropdown:focus-within .nav-dropdown-toggle i {
+    transform: rotate(180deg);
 }

@@ -288,7 +288,7 @@
         linear-gradient(
             180deg,
             #ffffff 0%,
-            #f8faff 100%
+            #ffffff 100%
         );
 
     overflow: hidden;
@@ -354,7 +354,7 @@
 
     margin: 0 0 25px;
 
-    color: var(--contact-dark);
+    color: var(--contact-liger);
 
     font-family: 'Manrope', sans-serif;
     font-size: clamp(55px, 7vw, 88px);
@@ -389,7 +389,7 @@
 .ra-contact-main {
     padding: 120px 0;
 
-    background: #ffffff;
+    background: #050011;
 }
 
 .ra-contact-layout {
@@ -432,7 +432,7 @@
 
     margin: 0 0 22px;
 
-    color: var(--contact-dark);
+    color: #ffffff;
 
     font-family: 'Manrope', sans-serif;
     font-size: clamp(40px, 4.6vw, 59px);
@@ -1410,4 +1410,97 @@
     width: 1px;
     height: 1px;
     overflow: hidden;
+}
+/* ==============================
+   SERVICES DROPDOWN
+============================== */
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    background: none;
+    border: none;
+    padding: 0;
+
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.nav-dropdown-toggle i {
+    font-size: 10px;
+    transition: transform 0.25s ease;
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 18px);
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+
+    min-width: 260px;
+
+    background: #0b1020;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 12px;
+
+    padding: 8px;
+
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+
+    z-index: 1000;
+}
+
+.nav-dropdown-menu a {
+    display: block;
+
+    padding: 12px 14px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    line-height: 1.4;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.nav-dropdown-menu a:hover {
+    background: rgba(49, 92, 255, 0.14);
+    color: #6f8cff;
+}
+
+/* Desktop hover */
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown:hover .nav-dropdown-toggle i,
+.nav-dropdown:focus-within .nav-dropdown-toggle i {
+    transform: rotate(180deg);
 }
