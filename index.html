@@ -143,6 +143,9 @@
 
     </div>
 
+    <a href="razet-academy.html" class="nav-product-link">
+        RAZET Academy
+    </a>
 
     <a href="about.html">About</a>
 
@@ -436,6 +439,24 @@
                     <i class="fas fa-arrow-right"></i>
                 </a>
 
+            </article>
+
+            <!-- RAZET PRODUCT: SCHOOL MANAGEMENT -->
+            <article class="service-card academy-service-card">
+                <div class="academy-card-topline">
+                    <span class="academy-product-label">RAZET PRODUCT</span>
+                    <span class="academy-card-icon"><i class="fas fa-school"></i></span>
+                </div>
+                <h3>RAZET Academy</h3>
+                <p>
+                    A complete school management platform for admissions,
+                    student records, academics, attendance, fees and payments,
+                    staff operations and parent engagement — all in one place.
+                </p>
+                <a href="razet-academy.html" class="service-link">
+                    Explore RAZET Academy
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </article>
 
         </div>
@@ -1394,8 +1415,40 @@
     </footer>
 
 
+    <!-- RAZET ACADEMY WELCOME POPUP: shown whenever the homepage is opened -->
+    <section class="academy-welcome-modal" id="academy-welcome-modal" role="dialog" aria-modal="true" aria-labelledby="academy-welcome-title" aria-describedby="academy-welcome-description" hidden>
+        <div class="academy-welcome-backdrop" data-academy-close></div>
+        <div class="academy-welcome-dialog">
+            <button class="academy-welcome-close" type="button" aria-label="Close welcome message" data-academy-close><i class="fa-solid fa-xmark"></i></button>
+            <div class="academy-welcome-art">
+                <div class="academy-art-glow"></div>
+                <span class="academy-art-badge"><i class="fa-solid fa-graduation-cap"></i> LEARN · CONNECT · GROW</span>
+                <img src="images/razet-student-class.png" alt="Learners taking part in a RAZET Academy technology class">
+                <div class="academy-art-caption"><span>RAZET</span><strong>Learn. Build. Grow.</strong></div>
+                <span class="academy-art-spark academy-spark-one">✦</span><span class="academy-art-spark academy-spark-two">✧</span>
+            </div>
+            <div class="academy-welcome-content">
+                <a class="academy-welcome-brand" href="razet-academy.html"><img src="images/razet-logo.png" alt="RAZET logo"><span><b>RAZET</b><small>ACADEMY</small></span></a>
+                <span class="academy-welcome-kicker">INTRODUCING OUR SCHOOL MANAGEMENT PRODUCT</span>
+                <h2 id="academy-welcome-title">A smarter way to <em>run your school.</em></h2>
+                <p id="academy-welcome-description">Meet RAZET Academy — one connected platform that helps schools organise administration, academics, fees, staff and communication with parents.</p>
+                <ul class="academy-welcome-benefits">
+                    <li><i class="fa-solid fa-user-graduate"></i><span><b>Student & academic records</b><small>Admissions, classes, attendance and learning information.</small></span></li>
+                    <li><i class="fa-solid fa-wallet"></i><span><b>Fees & online payments</b><small>Manage invoices, collections and payment records.</small></span></li>
+                    <li><i class="fa-solid fa-people-group"></i><span><b>Connected school portals</b><small>Purpose-built access for management, staff and families.</small></span></li>
+                </ul>
+                <div class="academy-welcome-actions">
+                    <a class="academy-welcome-primary" href="https://academy.razet.work">Explore RAZET Academy <i class="fa-solid fa-arrow-right"></i></a>
+                    <a class="academy-welcome-secondary" href="razet-academy.html">Discover the features</a>
+                </div>
+                <small class="academy-welcome-footnote"><i class="fa-solid fa-lock"></i> Secure, role-based access for your school community.</small>
+            </div>
+        </div>
+    </section>
+
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script src="js/academy-popup.js"></script>
     
 
 <!-- Razet AI Assistant -->
