@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://razettechnology.github.io/razet-technologies/sitemap.xml
+Sitemap: https://www.razet.work/sitemap.xml
